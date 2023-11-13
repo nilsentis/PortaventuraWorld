@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/Inegocis"
+        android:layout_width="@dimen/icon_mainpage"
+        android:layout_height="@dimen/icon_mainpage"
+        android:src="@drawable/business"
+        android:layout_margin="@dimen/margin_icon_mainpage" />
+
+    <ImageView
+        android:id="@+id/Itransport"
+        android:layout_width="@dimen/icon_mainpage"
+        android:layout_height="@dimen/icon_mainpage"
+        android:src="@drawable/transport"
+        android:layout_toEndOf="@id/Inegocis"
+        android:layout_margin="@dimen/margin_icon_mainpage" />
+
+
+    <ImageView
+        android:id="@+id/Ihotels"
+        android:layout_width="@dimen/icon_mainpage"
+        android:layout_height="@dimen/icon_mainpage"
+        android:src="@drawable/hotels"
+        android:layout_below="@id/Inegocis"
+        android:layout_margin="@dimen/margin_icon_mainpage" />
+
+    <ImageView
+        android:id="@+id/Ievent"
+        android:layout_width="@dimen/icon_mainpage"
+        android:layout_height="@dimen/icon_mainpage"
+        android:src="@drawable/events"
+        android:layout_toEndOf="@id/Ihotels"
+        android:layout_below="@id/Itransport"
+        android:layout_margin="@dimen/margin_icon_mainpage" />
+
+
+    <ImageView
+        android:id="@+id/Irestaurants"
+        android:layout_width="@dimen/icon_mainpage"
+        android:layout_height="@dimen/icon_mainpage"
+        android:src="@drawable/restaurants"
+        android:layout_below="@id/Ihotels"
+        android:layout_margin="@dimen/margin_icon_mainpage" />
+
+    <ImageView
+        android:id="@+id/Iatraccions"
+        android:layout_width="@dimen/icon_mainpage"
+        android:layout_height="@dimen/icon_mainpage"
+        android:src="@drawable/atraccions"
+        android:layout_toEndOf="@id/Irestaurants"
+        android:layout_below="@id/Ievent"
+        android:layout_margin="@dimen/margin_icon_mainpage" />
+
+
+
+
+</RelativeLayout>
