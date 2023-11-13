@@ -7,6 +7,11 @@
     tools:context=".MainActivity"
     android:gravity="center">
 
+<!--
+    Rupa:
+	    1. Buisness - Tendes (Complexe)
+	    2. Transports (Simple)
+-->
     <ImageView
         android:id="@+id/Inegocis"
         android:layout_width="@dimen/icon_mainpage"
@@ -23,6 +28,11 @@
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
 
+<!--
+    Adria Buiza:
+        1. Hotels (Complexe)
+        2. Events (Simples)
+-->
     <ImageView
         android:id="@+id/Ihotels"
         android:layout_width="@dimen/icon_mainpage"
@@ -41,6 +51,12 @@
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
 
+<!--
+    Nil:
+        0. activity_main .xml .java
+        1. Restaurants (Complexe)
+        2. Atraccions (Simple)
+-->
     <ImageView
         android:id="@+id/Irestaurants"
         android:layout_width="@dimen/icon_mainpage"
@@ -57,8 +73,5 @@
         android:layout_toEndOf="@id/Irestaurants"
         android:layout_below="@id/Ievent"
         android:layout_margin="@dimen/margin_icon_mainpage" />
-
-
-
 
 </RelativeLayout>
