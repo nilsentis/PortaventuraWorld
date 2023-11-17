@@ -6,22 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class RestaurantsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button breturn;
+    ImageView returnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        breturn = findViewById(R.id.bReturn);
-        breturn.setOnClickListener(this);
+        returnBack = findViewById(R.id.Ireturn);
+        returnBack.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        if (view.getId()==R.id.bReturn)
+        if (view.getId()==R.id.Ireturn)
         {
             Intent intent = new Intent (this, MainActivity.class);
             startActivity(intent);
