@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".RestaurantsActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bReturn"
+        android:src="@drawable/fletxa" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
