@@ -7,13 +7,6 @@
     <string name="transport_title">Transport</string>
     <string name="restaurants_title">Restaurants</string>
     <string name="atraccions_title">Atraccions</string>
-    <string name="BusTitol">Des de bus</string>
-    <string name="TextBusCostaDaurada">Des de la Costa Daurada la companyia Plana ofereix servei diari que uneix les poblacions de la zona amb el nostre parc</string>
-    <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
-    <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
-    <string name="TrenTitol">Des de Tren</string>
-
-
     <string-array name="tipus_restaurants">
         <item>Tots els restaurants</item>
         <item>Mediterrània</item>
@@ -23,4 +16,13 @@
         <item>Mèxic</item>
         <item>Far West</item>
     </string-array>
+
+    <string name="BusTitol">Des de bus</string>
+    <string name="TextBusCostaDaurada">Des de la Costa Daurada la companyia Plana ofereix servei diari que uneix les poblacions de la zona amb el nostre parc</string>
+    <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
+    <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
+    <string name="TrenTitol">Des de Tren</string>
+
+
+
 </resources>

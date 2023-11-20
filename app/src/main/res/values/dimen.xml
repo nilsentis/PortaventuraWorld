@@ -7,4 +7,5 @@
     <dimen name="return_heigh">35dp</dimen>
     <dimen name="return_margin">12dp</dimen>
     <dimen name="portaventura_heigh">45dp</dimen>
+    <dimen name="restaurants_heigh">160dp</dimen>
 </resources>

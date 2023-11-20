@@ -53,10 +53,26 @@
             android:layout_height="wrap_content"
             android:id="@+id/mediterrania">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/restaurant_racodemar" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/restaurants_heigh"
+                    android:layout_height="@dimen/restaurants_heigh"
+                    android:src="@drawable/restaurant_racodemar" />
+
+                <TextView
+                    android:id="@+id/racodemar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Web del Racó de mar"
+                    android:textColor="@color/blue"
+                    android:clickable="true" />
+            </LinearLayout>
+
+
 
         </RelativeLayout>
 

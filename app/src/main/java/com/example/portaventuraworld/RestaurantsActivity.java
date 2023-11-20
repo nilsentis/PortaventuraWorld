@@ -3,6 +3,7 @@ package com.example.portaventuraworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,11 +11,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class RestaurantsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     ImageView returnBack;
     Spinner spinner;
+    TextView racodemar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,9 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        racodemar = findViewById(R.id.racodemar);
+        racodemar.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +44,16 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent (this, MainActivity.class);
             startActivity(intent);
         }
+        if (view.getId()==R.id.racodemar)
+        {
+            String url = "https://www.portaventuraworld.com/ca/restaurants/raco-de-mar";
+            openWebPage(url);
+        }
+    }
+
+    private void openWebPage(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 
     @Override
