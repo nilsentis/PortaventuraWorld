@@ -8,5 +8,13 @@
     <string name="restaurants_title">Restaurants</string>
     <string name="atraccions_title">Atraccions</string>
 
-
+    <string-array name="tipus_restaurants">
+        <item>Tots els restaurants</item>
+        <item>Mediterrània</item>
+        <item>Polynesia</item>
+        <item>SésamoAventura</item>
+        <item>Xina</item>
+        <item>Mèxic</item>
+        <item>Far West</item>
+    </string-array>
 </resources>
