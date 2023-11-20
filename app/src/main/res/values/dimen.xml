@@ -2,4 +2,9 @@
 <resources>
     <dimen name="icon_mainpage">100dp</dimen>
     <dimen name="margin_icon_mainpage">30dp</dimen>
+    <dimen name="nav_heigh">55dp</dimen>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="return_heigh">35dp</dimen>
+    <dimen name="return_margin">12dp</dimen>
+    <dimen name="portaventura_heigh">45dp</dimen>
 </resources>
