@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TransportActivity">
+    tools:context=".RestaurantsActivity">
 
-    <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_heigh"
+        android:background="@color/blue"
+        android:id="@+id/var">
+
+        <ImageView
+            android:layout_width="@dimen/return_heigh"
+            android:layout_height="@dimen/return_heigh"
+            android:id="@+id/Ireturn"
+            android:src="@drawable/return50"
+            android:layout_margin="@dimen/return_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/transport_title"
+            android:textSize="@dimen/title_size"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/IportaventuraLogo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/portaventuralogo" />
+
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/var"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/LogoBus"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/bus"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/LogoBus"
+            android:text="@string/BusTitol"
+            android:textSize="40sp"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/CostaDaurada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TextBusCostaDaurada"
+            android:layout_below="@id/LogoBus"/>
+        <TextView
+            android:id="@+id/CostaBrava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CostaDaurada"
+            android:text="@string/TextBusCostaBrava"/>
+        <TextView
+            android:id="@+id/Barcelona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CostaBrava"
+            android:text="@string/TextBusBcn"/>
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/logoTren"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/tren"
+            android:layout_below="@id/Barcelona"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Barcelona"
+            android:layout_toEndOf="@id/logoTren"
+            android:text="@string/TrenTitol"
+            android:textSize="40sp"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>
