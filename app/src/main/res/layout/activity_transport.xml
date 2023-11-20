@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantsActivity">
+    tools:context=".RestaurantsActivity"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             android:layout_margin="@dimen/return_margin"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/transport_title"
@@ -93,7 +94,15 @@
             android:textSize="40sp"
             android:padding="10dp"/>
         <TextView
+            android:id="@+id/RenfeCat"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoTren"
+            android:text="@string/TrenCat"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RenfeCat"
+            android:text="@string/TrenESP"/>
     </RelativeLayout>
 </RelativeLayout>

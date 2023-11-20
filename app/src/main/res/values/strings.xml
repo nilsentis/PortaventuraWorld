@@ -7,12 +7,14 @@
     <string name="transport_title">Transport</string>
     <string name="restaurants_title">Restaurants</string>
     <string name="atraccions_title">Atraccions</string>
+
     <string name="BusTitol">Des de bus</string>
     <string name="TextBusCostaDaurada">Des de la Costa Daurada la companyia Plana ofereix servei diari que uneix les poblacions de la zona amb el nostre parc</string>
     <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
     <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
     <string name="TrenTitol">Des de Tren</string>
-
+    <string name="TrenCat"> resort disposa d'una parada a PortAventura World, integrada a la línia R-17 i RT2 de Rodalies de Catalunya. Si vens des de tren el billet de tren d'anada i tornada es gratuita</string>
+    <string name="TrenESP"> Disposem de trens de mitja distància des de València i d'alta velocitat (AVE) i llarga distància des de qualsevol punt de la Península perquè puguis arribar al resort de la manera més còmoda.</string>
 
     <string-array name="tipus_restaurants">
         <item>Tots els restaurants</item>
