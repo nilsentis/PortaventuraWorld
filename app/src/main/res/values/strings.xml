@@ -13,4 +13,14 @@
     <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
     <string name="TrenTitol">Des de Tren</string>
 
+
+    <string-array name="tipus_restaurants">
+        <item>Tots els restaurants</item>
+        <item>Mediterrània</item>
+        <item>Polynesia</item>
+        <item>SésamoAventura</item>
+        <item>Xina</item>
+        <item>Mèxic</item>
+        <item>Far West</item>
+    </string-array>
 </resources>
