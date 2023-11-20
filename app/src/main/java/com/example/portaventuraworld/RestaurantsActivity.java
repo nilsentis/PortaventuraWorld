@@ -1,8 +1,11 @@
 package com.example.portaventuraworld;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RestaurantsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+    private static final int PERMISSION_REQUEST_CALL_PHONE = 1;
 
     ImageView returnBack;
     Spinner spinner;
-    TextView racodemar;
+    TextView webracodemar, telefracodemar, ubiracodemar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +37,14 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        racodemar = findViewById(R.id.racodemar);
-        racodemar.setOnClickListener(this);
+        webracodemar = findViewById(R.id.webracodemar);
+        webracodemar.setOnClickListener(this);
+
+        telefracodemar = findViewById(R.id.telefracodemar);
+        telefracodemar.setOnClickListener(this);
+
+        ubiracodemar = findViewById(R.id.ubiracodemar);
+        ubiracodemar.setOnClickListener(this);
     }
 
     @Override
@@ -44,11 +54,33 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent (this, MainActivity.class);
             startActivity(intent);
         }
-        if (view.getId()==R.id.racodemar)
+        if (view.getId()==R.id.webracodemar)
         {
             String url = "https://www.portaventuraworld.com/ca/restaurants/raco-de-mar";
             openWebPage(url);
         }
+        if (view.getId()==R.id.telefracodemar)
+        {
+            String num = "977 77 90 90";
+            callNumber(num);
+        }
+        if (view.getId()==R.id.ubiracodemar)
+        {
+            String ubi = "geo:41.0850334,1.1525974,17";
+            openMaps(ubi);
+        }
+
+    }
+
+    private void openMaps(String ubi) {
+        Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse(ubi));
+        startActivity(intent);
+    }
+
+    private void callNumber(String num) {
+        String uri = "tel:" + num;
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(uri));
+        startActivity(intent);
     }
 
     private void openWebPage(String url) {
