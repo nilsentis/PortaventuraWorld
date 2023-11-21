@@ -17,16 +17,24 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+// després d'instalar Glide fem un File -> Sync Gradle Files
+
 public class RestaurantsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     private static final int PERMISSION_REQUEST_CALL_PHONE = 1;
 
-    ImageView returnBack;
+    ImageView returnBack,Iracodelmar;
     Spinner spinner;
-    TextView webracodemar, telefracodemar, ubiracodemar;
+    ImageView webracodemar, telefracodemar, ubiracodemar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
+
+        Iracodelmar = findViewById(R.id.Iracodelmar);
+        String racodelmarimage = "https://media.portaventuraworld.com/mediaManager/image/1d5665c85b963a7affd4073c935af15764f9339e11dd27bc8ac682ab5edf600b.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Iracodelmar ,racodelmarimage);
+
 
         returnBack = findViewById(R.id.Ireturn);
         returnBack.setOnClickListener(this);
@@ -45,6 +53,13 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         ubiracodemar = findViewById(R.id.ubiracodemar);
         ubiracodemar.setOnClickListener(this);
+    }
+
+    private void imatgeGlide(ImageView im, String url) {
+        // Càrrega d'imatge amb Glide
+        Glide.with(this)
+                .load(url)
+                .into(im);
     }
 
     @Override

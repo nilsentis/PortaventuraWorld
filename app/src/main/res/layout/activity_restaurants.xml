@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-
+                android:gravity="center"
                 android:layout_margin="10sp">
 
                 <TextView
@@ -72,31 +72,46 @@
                     android:textSize="15sp"/>
 
                 <ImageView
-                    android:layout_width="@dimen/restaurants_heigh"
-                    android:layout_height="86dp"
-                    android:src="@drawable/restaurant_racodemar" />
+                    android:layout_width="@dimen/restaurants_galeria"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Iracodelmar"
+                     />
 
-                <TextView
-                    android:id="@+id/webracodemar"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Web del Racó de mar"
-                    android:textColor="@color/blue"
-                    android:clickable="true" />
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
 
-                <TextView
-                    android:id="@+id/telefracodemar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Telèfon del Racó de mar"
-                    android:clickable="true" />
+                    <ImageButton
+                        android:id="@+id/webracodemar"
+                        android:layout_width="@dimen/rest_icon_web"
+                        android:layout_height="@dimen/rest_icon_web"
+                        android:background="@drawable/web_icon"
+                        android:layout_marginTop="2dp"/>
 
-                <TextView
-                    android:id="@+id/ubiracodemar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ubicació del Racó de mar"
-                    android:clickable="true" />
+                    <ImageButton
+                        android:id="@+id/telefracodemar"
+                        android:layout_width="@dimen/rest_icon_telef"
+                        android:layout_height="@dimen/rest_icon_telef"
+                        android:background="@drawable/telefon_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/ubiracodemar"
+                        android:layout_width="@dimen/rest_icon_ubi"
+                        android:layout_height="@dimen/rest_icon_ubi"
+                        android:background="@drawable/ubi_icon"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                android:id="@+id/plusracodemar"
+                android:layout_width="@dimen/rest_icon_plus"
+                android:layout_height="@dimen/rest_icon_plus"
+                android:background="@drawable/plus_icon"
+                android:layout_marginTop="3dp"/>
+                <!-- Fer pop up per fer opcionals dins un nou xml -->
+
             </LinearLayout>
 
 
