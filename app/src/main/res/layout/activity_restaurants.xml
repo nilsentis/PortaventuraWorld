@@ -54,11 +54,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/mediterrania"
+            android:layout_centerHorizontal="true"
             android:layout_below="@id/spinner_restaurants">
 
+            <!-- RACO DEL MAR -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/Lracodemar"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:layout_margin="10sp">
@@ -69,7 +72,7 @@
                     android:text="Racó de Mar"
                     android:layout_gravity="center"
                     android:fontFamily="casual"
-                    android:textSize="15sp"/>
+                    android:textSize="20sp"/>
 
                 <ImageView
                     android:layout_width="@dimen/restaurants_galeria"
@@ -111,6 +114,66 @@
                 android:background="@drawable/plus_icon"
                 android:layout_marginTop="3dp"/>
                 <!-- Fer pop up per fer opcionals dins un nou xml -->
+
+            </LinearLayout>
+
+            <!-- VINOSFERA -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/Lvinosfera"
+                android:gravity="center"
+                android:layout_margin="10sp"
+                android:layout_toEndOf="@id/Lracodemar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vinosfera"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/restaurants_galeria"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Ivinosfera"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/webvinosfera"
+                        android:layout_width="@dimen/rest_icon_web"
+                        android:layout_height="@dimen/rest_icon_web"
+                        android:background="@drawable/web_icon"
+                        android:layout_marginTop="2dp"/>
+
+                    <ImageButton
+                        android:id="@+id/telefvinosfera"
+                        android:layout_width="@dimen/rest_icon_telef"
+                        android:layout_height="@dimen/rest_icon_telef"
+                        android:background="@drawable/telefon_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/ubivinosfera"
+                        android:layout_width="@dimen/rest_icon_ubi"
+                        android:layout_height="@dimen/rest_icon_ubi"
+                        android:background="@drawable/ubi_icon"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/plusvinosfera"
+                    android:layout_width="@dimen/rest_icon_plus"
+                    android:layout_height="@dimen/rest_icon_plus"
+                    android:background="@drawable/plus_icon"
+                    android:layout_marginTop="3dp"/>
 
             </LinearLayout>
 

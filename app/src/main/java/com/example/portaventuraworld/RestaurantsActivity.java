@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,17 +24,21 @@ import com.bumptech.glide.Glide;
 public class RestaurantsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     private static final int PERMISSION_REQUEST_CALL_PHONE = 1;
 
-    ImageView returnBack,Iracodelmar;
+    ImageView returnBack,Imracodelmar,Imvinosfera;
     Spinner spinner;
-    ImageView webracodemar, telefracodemar, ubiracodemar;
+    ImageButton webracodemar, telefracodemar, ubiracodemar, plusracodemar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        Iracodelmar = findViewById(R.id.Iracodelmar);
+        Imracodelmar = findViewById(R.id.Iracodelmar);
         String racodelmarimage = "https://media.portaventuraworld.com/mediaManager/image/1d5665c85b963a7affd4073c935af15764f9339e11dd27bc8ac682ab5edf600b.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
-        imatgeGlide(Iracodelmar ,racodelmarimage);
+        imatgeGlide(Imracodelmar ,racodelmarimage);
+
+        Imvinosfera = findViewById(R.id.Ivinosfera);
+        String vinosferaimage = "https://media.portaventuraworld.com/mediaManager/image/2bcd96f1c091e17eed669fe0fb50640d8f2dab5dfa0dfbdcf2a486c430a1f388.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Imvinosfera ,vinosferaimage);
 
 
         returnBack = findViewById(R.id.Ireturn);
@@ -53,6 +58,9 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         ubiracodemar = findViewById(R.id.ubiracodemar);
         ubiracodemar.setOnClickListener(this);
+
+        plusracodemar = findViewById(R.id.plusracodemar);
+        plusracodemar.setOnClickListener(this);
     }
 
     private void imatgeGlide(ImageView im, String url) {
@@ -83,6 +91,11 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         {
             String ubi = "geo:41.0850334,1.1525974,17";
             openMaps(ubi);
+        }
+        if (view.getId()==R.id.plusracodemar)
+        {
+            Intent intent = new Intent(this,RestaurantsPlusRacoDeMar.class); // obrim l'activitat 2 desde un intent
+            startActivity(intent);
         }
 
     }
