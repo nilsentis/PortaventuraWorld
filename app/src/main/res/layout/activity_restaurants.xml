@@ -46,29 +46,75 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_restaurants"></Spinner>
+            android:id="@+id/spinner_restaurants"
+            android:background="@color/blue_light">
+        </Spinner>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/mediterrania">
+            android:id="@+id/mediterrania"
+            android:layout_below="@id/spinner_restaurants">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/restaurant_racodemar" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Racó de Mar"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/restaurants_galeria"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Iracodelmar"
+                     />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/webracodemar"
+                        android:layout_width="@dimen/rest_icon_web"
+                        android:layout_height="@dimen/rest_icon_web"
+                        android:background="@drawable/web_icon"
+                        android:layout_marginTop="2dp"/>
+
+                    <ImageButton
+                        android:id="@+id/telefracodemar"
+                        android:layout_width="@dimen/rest_icon_telef"
+                        android:layout_height="@dimen/rest_icon_telef"
+                        android:background="@drawable/telefon_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/ubiracodemar"
+                        android:layout_width="@dimen/rest_icon_ubi"
+                        android:layout_height="@dimen/rest_icon_ubi"
+                        android:background="@drawable/ubi_icon"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                android:id="@+id/plusracodemar"
+                android:layout_width="@dimen/rest_icon_plus"
+                android:layout_height="@dimen/rest_icon_plus"
+                android:background="@drawable/plus_icon"
+                android:layout_marginTop="3dp"/>
+                <!-- Fer pop up per fer opcionals dins un nou xml -->
+
+            </LinearLayout>
+
 
         </RelativeLayout>
-
-
     </RelativeLayout>
-
-
-
-
-
-
-
-
-
 </RelativeLayout>
