@@ -22,7 +22,8 @@
     <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
     <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
     <string name="TrenTitol">Des de Tren</string>
-
+    <string name="TrenESP">text aqui</string>
+    <string name="TrenCat">text aqui</string>
 
 
 </resources>

@@ -19,8 +19,11 @@
             android:exported="false" />
         <activity
             android:name=".RestaurantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantsPlusRacoDeMar"
             android:exported="false"
-            />
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"/>
         <activity
             android:name=".EventsActivity"
             android:exported="false" />
