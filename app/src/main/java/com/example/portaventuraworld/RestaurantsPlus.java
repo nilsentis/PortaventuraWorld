@@ -25,7 +25,7 @@ public class RestaurantsPlus extends AppCompatActivity implements View.OnClickLi
 
         if (!sacRebut.isEmpty())
         {
-            String titol = sacRebut.getString("titol");
+            String titol = sacRebut.getString("titolPlus");
             desc = sacRebut.getString("descripcio");
             url = sacRebut.getString("url");
 
@@ -52,6 +52,7 @@ public class RestaurantsPlus extends AppCompatActivity implements View.OnClickLi
         {
             Intent intent = new Intent(this,RestaurantsActivity.class); // obrim l'activitat 2 desde un intent
             startActivity(intent);
+            //dialog.dismiss();
         }
     }
 

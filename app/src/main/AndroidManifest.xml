@@ -34,7 +34,7 @@
             android:name=".TransportActivity"
             android:exported="false" />
         <activity
-            android:name=".BuisnessActivity"
+            android:name=".BusinessActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

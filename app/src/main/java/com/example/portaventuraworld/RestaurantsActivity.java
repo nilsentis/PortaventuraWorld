@@ -19,9 +19,13 @@ import com.bumptech.glide.Glide;
 public class RestaurantsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     private static final int PERMISSION_REQUEST_CALL_PHONE = 1;
 
+    // Inicialització layouts
+
     ImageView returnBack,Imracodelmar,Imvinosfera;
     Spinner spinner;
     ImageButton webracodemar, telefracodemar, ubiracodemar, plusracodemar;
+    ImageButton webvinosfera, telefvinosfera, ubivinosfera, plusvinosfera;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+        // Raco del mar
         webracodemar = findViewById(R.id.webracodemar);
         webracodemar.setOnClickListener(this);
 
@@ -56,6 +61,19 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         plusracodemar = findViewById(R.id.plusracodemar);
         plusracodemar.setOnClickListener(this);
+
+        //Vinosfera
+        webvinosfera = findViewById(R.id.webvinosfera);
+        webvinosfera.setOnClickListener(this);
+
+        telefvinosfera = findViewById(R.id.telefvinosfera);
+        telefvinosfera.setOnClickListener(this);
+
+        ubivinosfera = findViewById(R.id.ubivinosfera);
+        ubivinosfera.setOnClickListener(this);
+
+        plusvinosfera = findViewById(R.id.plusvinosfera);
+        plusvinosfera.setOnClickListener(this);
     }
 
     private void imatgeGlide(ImageView im, String url) {
@@ -72,6 +90,8 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent (this, MainActivity.class);
             startActivity(intent);
         }
+
+        //Raco de Mar
         if (view.getId()==R.id.webracodemar)
         {
             String url = "https://www.portaventuraworld.com/ca/restaurants/raco-de-mar";
@@ -84,8 +104,10 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         }
         if (view.getId()==R.id.ubiracodemar)
         {
-            String ubi = "geo:41.0850334,1.1525974,17";
-            openMaps(ubi);
+            String ubi = "41.0850334,1.1525974,17"; // per més endavant mirar altres opcions fletxa ubi
+            String nomUbi = "Racó de mar Portaventura";
+
+            openMaps(ubi,nomUbi);
         }
         if (view.getId()==R.id.plusracodemar)
         {
@@ -98,7 +120,44 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
             url = "https://www.tripadvisor.es/Restaurant_Review-g1007885-d6868817-Reviews-Raco_del_Mar-Vila_Seca_Costa_Dorada_Province_of_Tarragona_Catalonia.html";
 
             Bundle sac = new Bundle();
-            sac.putString("titol",titol.getText().toString());
+            sac.putString("titolPlus",titol.getText().toString());
+            sac.putString("descripcio",descripcio);
+            sac.putString("url",url);
+
+            intent.putExtras(sac);
+            startActivity(intent);
+        }
+
+        //Vinosfera
+        if (view.getId()==R.id.webvinosfera)
+        {
+            String url = "https://www.portaventuraworld.com/ca/restaurants/vinosfera-tapes-i-vins";
+            openWebPage(url);
+        }
+        if (view.getId()==R.id.telefvinosfera)
+        {
+            String num = "977 77 90 90";
+            callNumber(num);
+        }
+        if (view.getId()==R.id.ubivinosfera)
+        {
+            String ubi = "41.0850334,1.1525974,17";
+            String nomUbi = "Vinosfera Portaventura";
+
+            openMaps(ubi,nomUbi);
+        }
+        if (view.getId()==R.id.plusvinosfera)
+        {
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat 2 desde un intent
+
+            TextView titol = findViewById(R.id.titolVinosfera);
+            String descripcio, url;
+
+            descripcio = "Tapes i vins mediterrànis.";
+            url = "https://www.tripadvisor.es/Restaurant_Review-g562814-d3372028-Reviews-Vinosfera_Tapes_i_Vins-Salou_Costa_Dorada_Province_of_Tarragona_Catalonia.html";
+
+            Bundle sac = new Bundle();
+            sac.putString("titolPlus",titol.getText().toString());
             sac.putString("descripcio",descripcio);
             sac.putString("url",url);
 
@@ -108,8 +167,9 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
     }
 
-    private void openMaps(String ubi) {
-        Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse(ubi));
+    private void openMaps(String ubi, String nomLloc) {
+        String uri = "geo:" + ubi + "?q=" + Uri.encode(nomLloc);
+        Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse(uri));
         startActivity(intent);
     }
 
@@ -126,7 +186,21 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        /*
+        String selectedOption = parentView.getItemAtPosition(position).toString();
 
+        // Aquí pots gestionar la visibilitat dels layouts segons la selecció
+        if ("Opció A".equals(selectedOption)) {
+            layoutA.setVisibility(View.VISIBLE);
+            layoutB.setVisibility(View.GONE);
+        } else if ("Opció B".equals(selectedOption)) {
+            layoutA.setVisibility(View.GONE);
+            layoutB.setVisibility(View.VISIBLE);
+        } else {
+            // Si vols gestionar altres opcions
+            // ...
+        }
+        */
     }
 
     @Override

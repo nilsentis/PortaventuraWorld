@@ -53,8 +53,10 @@
 
 <!--
     Nil:
-        0. activity_main .xml .java
-        0. fer nav comú
+        0. fet ,activity_main .xml .java
+        0. fet ,creació de tots els layouts (events,hotels,etc)
+        0. fet ,botons retorn comú .java
+        0. fet ,fer nav comú, de moment linear, més endavant quan ens ensenyin canviar-ho
         1. Restaurants (Complexe)
         2. Atraccions (Simple)
 -->

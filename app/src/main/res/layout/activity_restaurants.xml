@@ -134,7 +134,8 @@
                     android:text="Vinosfera"
                     android:layout_gravity="center"
                     android:fontFamily="casual"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:id="@+id/titolVinosfera"/>
 
                 <ImageView
                     android:layout_width="@dimen/restaurants_galeria"

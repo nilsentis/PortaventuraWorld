@@ -3,7 +3,6 @@ package com.example.portaventuraworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (view.getId()==R.id.Inegocis)
         {
-            Intent intent = new Intent (this, BuisnessActivity.class);
+            Intent intent = new Intent (this, BusinessActivity.class);
             startActivity(intent);
         }
         if (view.getId()==R.id.Itransport)
