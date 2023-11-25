@@ -8,15 +8,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-public class RestaurantsPlusRacoDeMar extends AppCompatActivity implements View.OnClickListener{
+public class RestaurantsPlus extends AppCompatActivity implements View.OnClickListener{
 
     ImageButton trip;
     Button enviar;
+
+    String desc, url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurants_plus_raco_de_mar);
+        setContentView(R.layout.activity_restaurants_plus);
+
+        Bundle sacRebut = getIntent().getExtras(); // recuperem el intent enviat amb les dades en un sac
+
+        if (!sacRebut.isEmpty())
+        {
+            String titol = sacRebut.getString("titol");
+            desc = sacRebut.getString("descripcio");
+            url = sacRebut.getString("url");
+
+            TextView titolPlus = findViewById(R.id.titolPlus);
+            titolPlus.setText(titol);
+            TextView descrPlus = findViewById(R.id.descripcioPlus);
+            descrPlus.setText(desc);
+        }
 
         trip = findViewById(R.id.trip);
         trip.setOnClickListener(this);
@@ -29,7 +46,6 @@ public class RestaurantsPlusRacoDeMar extends AppCompatActivity implements View.
     public void onClick(View view) {
         if (view.getId()==R.id.trip)
         {
-            String url = "https://www.tripadvisor.es/Restaurant_Review-g1007885-d6868817-Reviews-Raco_del_Mar-Vila_Seca_Costa_Dorada_Province_of_Tarragona_Catalonia.html";
             openWebPage(url);
         }
         if (view.getId()==R.id.Benviar)

@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spinner_restaurants"
-            android:background="@color/blue_light">
+            android:background="@color/blue_light" >
         </Spinner>
 
         <RelativeLayout
@@ -72,7 +72,8 @@
                     android:text="Racó de Mar"
                     android:layout_gravity="center"
                     android:fontFamily="casual"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:id="@+id/titolRacodemar"/>
 
                 <ImageView
                     android:layout_width="@dimen/restaurants_galeria"

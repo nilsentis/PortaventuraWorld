@@ -4,32 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantsPlusRacoDeMar"
+    tools:context=".RestaurantsPlus"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Racó de Mar"
+        android:text=""
         android:fontFamily="casual"
         android:textSize="20sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:id="@+id/titolPlus"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cuina mediterrània: amanides, arròs, pizzes i pasta."
+        android:text=""
         android:textSize="12sp"
         android:textColor="@color/grey"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        android:id="@+id/descripcioPlus"/>
 
     <ImageButton
         android:id="@+id/trip"
         android:layout_width="80dp"
         android:layout_height="92dp"
         android:background="@drawable/tripadvisor_icon"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp" />
 
     <RatingBar
         android:id="@+id/ratingBar"

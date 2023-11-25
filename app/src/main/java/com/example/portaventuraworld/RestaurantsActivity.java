@@ -1,22 +1,17 @@
 package com.example.portaventuraworld;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 // després d'instalar Glide fem un File -> Sync Gradle Files
@@ -94,7 +89,20 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         }
         if (view.getId()==R.id.plusracodemar)
         {
-            Intent intent = new Intent(this,RestaurantsPlusRacoDeMar.class); // obrim l'activitat 2 desde un intent
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat 2 desde un intent
+
+            TextView titol = findViewById(R.id.titolRacodemar);
+            String descripcio, url;
+
+            descripcio = "Cuina mediterrània: amanides, arròs, pizzes i pasta.";
+            url = "https://www.tripadvisor.es/Restaurant_Review-g1007885-d6868817-Reviews-Raco_del_Mar-Vila_Seca_Costa_Dorada_Province_of_Tarragona_Catalonia.html";
+
+            Bundle sac = new Bundle();
+            sac.putString("titol",titol.getText().toString());
+            sac.putString("descripcio",descripcio);
+            sac.putString("url",url);
+
+            intent.putExtras(sac);
             startActivity(intent);
         }
 
