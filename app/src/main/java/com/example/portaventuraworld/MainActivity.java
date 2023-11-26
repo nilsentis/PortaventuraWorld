@@ -68,8 +68,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent (this, AtraccionsActivity.class);
             startActivity(intent);
         }
-
-
-
     }
 }

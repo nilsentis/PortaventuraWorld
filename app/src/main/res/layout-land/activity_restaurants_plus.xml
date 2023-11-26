@@ -64,6 +64,8 @@
             android:text="Enviar Ressenya"
             android:backgroundTint="@color/green"
             android:layout_marginTop="2dp"/>
+        <!-- Podriem posar tots els textos hardcodejats si fos un projecte molt gran i amb varios idiomes -->
+
     </LinearLayout>
 
 
