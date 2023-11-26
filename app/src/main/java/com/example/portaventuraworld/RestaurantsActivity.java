@@ -111,7 +111,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         }
         if (view.getId()==R.id.plusracodemar)
         {
-            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat 2 desde un intent
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent
 
             TextView titol = findViewById(R.id.titolRacodemar);
             String descripcio, url;
@@ -148,7 +148,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         }
         if (view.getId()==R.id.plusvinosfera)
         {
-            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat 2 desde un intent
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent
 
             TextView titol = findViewById(R.id.titolVinosfera);
             String descripcio, url;

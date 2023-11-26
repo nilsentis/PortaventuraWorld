@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_heigh"
+        android:background="@color/blue"
+        android:id="@+id/nav">
+
+        <ImageView
+            android:layout_width="@dimen/return_heigh"
+            android:layout_height="@dimen/return_heigh"
+            android:id="@+id/Ireturn"
+            android:src="@drawable/return50"
+            android:layout_margin="@dimen/return_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RESTAURANTS"
+            android:textSize="@dimen/title_size"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/IportaventuraLogo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/portaventuralogo" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav" >
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_restaurants"
+            android:background="@color/blue_light" >
+        </Spinner>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mediterrania"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/spinner_restaurants">
+
+            <!-- RACO DEL MAR -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Lracodemar"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Racó de Mar"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    android:id="@+id/titolRacodemar"/>
+
+                <ImageView
+                    android:layout_width="@dimen/restaurants_galeria"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Iracodelmar"
+                     />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/webracodemar"
+                        android:layout_width="@dimen/rest_icon_web"
+                        android:layout_height="@dimen/rest_icon_web"
+                        android:background="@drawable/web_icon"
+                        android:layout_marginTop="2dp"/>
+
+                    <ImageButton
+                        android:id="@+id/telefracodemar"
+                        android:layout_width="@dimen/rest_icon_telef"
+                        android:layout_height="@dimen/rest_icon_telef"
+                        android:background="@drawable/telefon_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/ubiracodemar"
+                        android:layout_width="@dimen/rest_icon_ubi"
+                        android:layout_height="@dimen/rest_icon_ubi"
+                        android:background="@drawable/ubi_icon"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                android:id="@+id/plusracodemar"
+                android:layout_width="@dimen/rest_icon_plus"
+                android:layout_height="@dimen/rest_icon_plus"
+                android:background="@drawable/plus_icon"
+                android:layout_marginTop="3dp"/>
+                <!-- Fer pop up per fer opcionals dins un nou xml -->
+
+            </LinearLayout>
+
+            <!-- VINOSFERA -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/Lvinosfera"
+                android:gravity="center"
+                android:layout_margin="10sp"
+                android:layout_toEndOf="@id/Lracodemar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vinosfera"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    android:id="@+id/titolVinosfera"/>
+
+                <ImageView
+                    android:layout_width="@dimen/restaurants_galeria"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Ivinosfera"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/webvinosfera"
+                        android:layout_width="@dimen/rest_icon_web"
+                        android:layout_height="@dimen/rest_icon_web"
+                        android:background="@drawable/web_icon"
+                        android:layout_marginTop="2dp"/>
+
+                    <ImageButton
+                        android:id="@+id/telefvinosfera"
+                        android:layout_width="@dimen/rest_icon_telef"
+                        android:layout_height="@dimen/rest_icon_telef"
+                        android:background="@drawable/telefon_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/ubivinosfera"
+                        android:layout_width="@dimen/rest_icon_ubi"
+                        android:layout_height="@dimen/rest_icon_ubi"
+                        android:background="@drawable/ubi_icon"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/plusvinosfera"
+                    android:layout_width="@dimen/rest_icon_plus"
+                    android:layout_height="@dimen/rest_icon_plus"
+                    android:background="@drawable/plus_icon"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -7,6 +7,8 @@
     tools:context=".MainActivity"
     android:gravity="center">
 
+    <!-- Aquesta carpeta hi aniran tots els xml adaptats a horitzontal (landscape) -->
+
 <!--
     Rupa:
 	    1. Buisness - Tendes (Complexe)
@@ -24,7 +26,7 @@
         android:layout_width="@dimen/icon_mainpage"
         android:layout_height="@dimen/icon_mainpage"
         android:src="@drawable/transport"
-        android:layout_toEndOf="@id/Inegocis"
+        android:layout_below="@id/Inegocis"
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
 
@@ -38,7 +40,7 @@
         android:layout_width="@dimen/icon_mainpage"
         android:layout_height="@dimen/icon_mainpage"
         android:src="@drawable/hotels"
-        android:layout_below="@id/Inegocis"
+        android:layout_toEndOf="@id/Inegocis"
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
     <ImageView
@@ -46,21 +48,13 @@
         android:layout_width="@dimen/icon_mainpage"
         android:layout_height="@dimen/icon_mainpage"
         android:src="@drawable/events"
-        android:layout_toEndOf="@id/Ihotels"
-        android:layout_below="@id/Itransport"
+        android:layout_toEndOf="@id/Itransport"
+        android:layout_below="@id/Ihotels"
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
 
 <!--
     Nil:
-        0. fet ,activity_main .xml .java
-        0. fet ,creació de tots els layouts (events,hotels,etc)
-        0. fet ,botons retorn comú .java
-        0. fet ,fer nav comú, de moment linear, més endavant quan ens ensenyin canviar-ho
-        0. fet ,carpeta layout-land
-        0. fet ,copies dels layouts xml en vertical
-        0. fet ,adaptar els main landscape a la pantalla horitzontal
-        0. fent ,adaptar subpantalles a landscape
         1. Restaurants (Complexe)
         2. Atraccions (Simple)
 -->
@@ -69,7 +63,7 @@
         android:layout_width="@dimen/icon_mainpage"
         android:layout_height="@dimen/icon_mainpage"
         android:src="@drawable/restaurants"
-        android:layout_below="@id/Ihotels"
+        android:layout_toEndOf="@id/Ihotels"
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
     <ImageView
@@ -77,8 +71,8 @@
         android:layout_width="@dimen/icon_mainpage"
         android:layout_height="@dimen/icon_mainpage"
         android:src="@drawable/atraccions"
-        android:layout_toEndOf="@id/Irestaurants"
-        android:layout_below="@id/Ievent"
+        android:layout_toEndOf="@id/Ievent"
+        android:layout_below="@id/Irestaurants"
         android:layout_margin="@dimen/margin_icon_mainpage" />
 
 </RelativeLayout>
