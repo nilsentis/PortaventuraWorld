@@ -22,8 +22,8 @@
     <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
     <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
     <string name="TrenTitol">Des de Tren</string>
-    <string name="TrenESP">text aqui</string>
-    <string name="TrenCat">text aqui</string>
+    <string name="TrenESP">El resort disposa una parada a PortAventura World, integrada a la línia R-17 i RT2 de Rodalies de Catalunya. Amb entrada pots visitar els parcs de PortAventura World i El BITLLET DE TREN per anada i tornada ET SURT DE FRANC!</string>
+    <string name="TrenCat">Renfe també posa a la teva disposició una àmplia programació de trens de mitja distància des de València i alta velocitat (AVE) i llarga distància des de qualsevol punt de la Península</string>
 
 
 </resources>

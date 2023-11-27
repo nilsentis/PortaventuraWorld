@@ -1,9 +1,11 @@
 package com.example.portaventuraworld;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 // després d'instalar Glide fem un File -> Sync Gradle Files
@@ -37,6 +40,15 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
+        Imracodelmar = findViewById(R.id.Iracodelmar);
+        String racodelmarimage = "https://media.portaventuraworld.com/mediaManager/image/1d5665c85b963a7affd4073c935af15764f9339e11dd27bc8ac682ab5edf600b.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Imracodelmar ,racodelmarimage);
+
+        Imvinosfera = findViewById(R.id.Ivinosfera);
+        String vinosferaimage = "https://media.portaventuraworld.com/mediaManager/image/2bcd96f1c091e17eed669fe0fb50640d8f2dab5dfa0dfbdcf2a486c430a1f388.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Imvinosfera ,vinosferaimage);
+
+
         returnBack = findViewById(R.id.Ireturn);
         returnBack.setOnClickListener(this);
 
@@ -49,7 +61,6 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         // Raco del mar
         Imracodelmar = findViewById(R.id.Iracodelmar);
-        String racodelmarimage = "https://media.portaventuraworld.com/mediaManager/image/1d5665c85b963a7affd4073c935af15764f9339e11dd27bc8ac682ab5edf600b.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
         imatgeGlide(Imracodelmar ,racodelmarimage);
 
         webracodemar = findViewById(R.id.webracodemar);
@@ -67,7 +78,6 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         //Vinosfera
         Imvinosfera = findViewById(R.id.Ivinosfera);
-        String vinosferaimage = "https://media.portaventuraworld.com/mediaManager/image/2bcd96f1c091e17eed669fe0fb50640d8f2dab5dfa0dfbdcf2a486c430a1f388.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
         imatgeGlide(Imvinosfera ,vinosferaimage);
 
         webvinosfera = findViewById(R.id.webvinosfera);

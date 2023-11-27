@@ -40,17 +40,20 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/var"
         android:layout_centerVertical="true">
+
         <ImageView
             android:id="@+id/LogoBus"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/bus"
-            android:layout_margin="10dp"
-            />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/bus" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,31 +81,64 @@
             android:layout_below="@+id/CostaBrava"
             android:text="@string/TextBusBcn"/>
 
+        <Button
+            android:id="@+id/BtBus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Barcelona"
+            android:layout_centerInParent="true"
+            android:padding="1sp"
+            android:text="Més informació" />
         <ImageView
             android:id="@+id/logoTren"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:src="@drawable/tren"
-            android:layout_below="@id/Barcelona"
-            android:padding="10dp"/>
+            android:layout_below="@id/BtBus"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Barcelona"
+            android:layout_below="@id/BtBus"
             android:layout_toEndOf="@id/logoTren"
             android:text="@string/TrenTitol"
             android:textSize="40sp"
             android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/AVE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoTren"
+            android:text="@string/TrenESP"
+            android:paddingTop="10sp"
+            />
+
         <TextView
             android:id="@+id/RenfeCat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/logoTren"
+            android:layout_below="@id/AVE"
             android:text="@string/TrenCat"/>
-        <TextView
-            android:layout_width="wrap_content"
+
+
+        <Button
+            android:id="@+id/Bttren"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/RenfeCat"
-            android:text="@string/TrenESP"/>
+            android:layout_below="@+id/RenfeCat"
+            android:layout_centerInParent="true"
+            android:padding="1sp"
+            android:text="Més informació" />
+        <Button
+            android:id="@+id/BtTaxi"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/Bttren"
+            android:paddingTop="1sp"
+            android:text="Taxi"
+            />
+
     </RelativeLayout>
+
 </RelativeLayout>
