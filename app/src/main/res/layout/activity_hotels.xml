@@ -1,381 +1,464 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HotelsActivity">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/nav_heigh"
-        android:background="@color/blue"
-        android:id="@+id/var">
-        <ImageView
-            android:layout_width="@dimen/return_heigh"
-            android:layout_height="@dimen/return_heigh"
-            android:id="@+id/Ireturn"
-            android:src="@drawable/return50"
-            android:layout_margin="@dimen/return_margin"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="HOTELS"
-            android:textSize="@dimen/title_size"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"/>
-        <ImageView
-            android:id="@+id/IportaventuraLogo"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="12dp"
-            android:src="@drawable/portaventuralogo" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelCreek"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/var"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="3dp">
+        tools:context=".HotelsActivity">
 
-        <ImageView
-            android:id="@+id/hotelCreekFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_colorado_creek" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_heigh"
+            android:background="@color/blue"
+            android:id="@+id/var">
+            <ImageView
+                android:layout_width="@dimen/return_heigh"
+                android:layout_height="@dimen/return_heigh"
+                android:id="@+id/IreturnH"
+                android:src="@drawable/return50"
+                android:layout_margin="@dimen/return_margin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HOTELS"
+                android:textSize="@dimen/title_size"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/IportaventuraLogo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/portaventuralogo" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/estrellasHotelCreek"
-            android:layout_width="87dp"
+        <Spinner
+            android:id="@+id/spinnerH"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/hotelCreekFoto"
-            android:src="@drawable/hestrellas5" />
+            android:layout_below="@+id/var"
+            android:layout_marginBottom="10dp"
+            android:background="@color/blue_light">
+        </Spinner>
 
-        <TextView
-            android:id="@+id/preuHotelCreek"
+        <RelativeLayout
+            android:id="@+id/hotelCreek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelCreek"
-            android:layout_below="@+id/hotelCreekFoto"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="6dp"
-            android:text="135€"
-            />
-        <TextView
-            android:id="@+id/nombreHotelCreek"
+            android:layout_below="@+id/spinnerH"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/hotelCreekFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_colorado_creek" />
+
+            <ImageView
+                android:id="@+id/estrellasHotelCreek"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hotelCreekFoto"
+                android:src="@drawable/hestrellas5" />
+
+            <TextView
+                android:id="@+id/preuHotelCreek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelCreek"
+                android:layout_below="@+id/hotelCreekFoto"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="6dp"
+                android:text="135€"
+                />
+            <TextView
+                android:id="@+id/nombreHotelCreek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelCreek"
+                android:text="Hotel Colorado Creek"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoCreek"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelCreek"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoCreek"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelRiver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelCreek"
-            android:text="Hotel Colorado Creek"
-            />
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/hotelCreek"
+            android:layout_below="@+id/spinnerH">
 
-        <!--<ImageButton
-            android:id="@+id/pinCreek"
+            <ImageView
+                android:id="@+id/hotelRiverFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_gold_river" />
+            <ImageView
+                android:id="@+id/estrellasHotelRiver"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas5"
+                android:layout_below="@+id/hotelRiverFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelRiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelRiver"
+                android:layout_below="@+id/hotelRiverFoto"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="6dp"
+                android:text="130€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelRiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelRiver"
+                android:text="Hotel Gold River"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoRiver"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelRiver"
+                android:contentDescription="infoRiver"
+                android:layout_centerHorizontal="true"            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelMansionLucy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nombreHotelCreek"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/location" />
+            android:layout_marginEnd="26dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/hotelCreek">
 
-        <TextView
-            android:layout_width="125dp"
+            <ImageView
+                android:id="@+id/hotelMansionLucyFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_mansion_lucy" />
+
+            <ImageView
+                android:id="@+id/estrellasHotelMansionLucy"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas5"
+                android:layout_below="@+id/hotelMansionLucyFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelMansionLucy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelMansionLucy"
+                android:layout_below="@+id/hotelMansionLucyFoto"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="6dp"
+                android:text="295€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelMansionLucy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelMansionLucy"
+                android:text="Hotel Mansion de Lucy"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoLucy"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelMansionLucy"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoLucy"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelPortAventura"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_below="@+id/nombreHotelCreek"
-            android:layout_toEndOf="@+id/pinCreek"
-            android:text="Avinguda Alcalde Pere Molas, s/n 43480 Vila-Seca, Tarragona"
-            />-->
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/hotelMansionLucy"
+            android:layout_below="@+id/hotelRiver">
+
+            <ImageView
+                android:id="@+id/hotelPortAventuraFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_port_aventura" />
+            <ImageView
+                android:id="@+id/estrellasHotelPortAventura"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas4"
+                android:layout_below="@+id/hotelPortAventuraFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelPortAventura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelPortAventura"
+                android:layout_below="@+id/hotelPortAventuraFoto"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="6dp"
+                android:text="130€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelPortAventura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelPortAventura"
+                android:text="Hotel PortAventura"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoPort"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelPortAventura"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoPortAventura"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelCaribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/hotelMansionLucy">
+
+            <ImageView
+                android:id="@+id/hotelCaribeFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_caribe" />
+
+            <ImageView
+                android:id="@+id/estrellasHotelCaribe"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas4"
+                android:layout_below="@+id/hotelCaribeFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelCaribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelCaribe"
+                android:layout_below="@+id/hotelCaribeFoto"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="6dp"
+                android:text="130€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelCaribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelCaribe"
+                android:text="Hotel Caribe"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoCaribe"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelCaribe"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoCaribe"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelPaso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/hotelCaribe"
+            android:layout_below="@+id/hotelPortAventura">
+
+            <ImageView
+                android:id="@+id/hotelPasoFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_el_paso" />
+            <ImageView
+                android:id="@+id/estrellasHotelPaso"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas4"
+                android:layout_below="@+id/hotelPasoFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelPaso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelPaso"
+                android:layout_below="@+id/hotelPasoFoto"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="6dp"
+                android:text="130€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelPaso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelPaso"
+                android:text="Hotel el Paso"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoPaso"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelPaso"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoPaso"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelVila"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/hotelCaribe">
+
+            <ImageView
+                android:id="@+id/hotelVilaFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_vila_centric" />
+            <ImageView
+                android:id="@+id/estrellasHotelVila"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas4"
+                android:layout_below="@+id/hotelVilaFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelVila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelVila"
+                android:layout_below="@+id/hotelVilaFoto"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="6dp"
+                android:text="95€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelVila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelVila"
+                android:text="Hotel Vila Centric"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoVila"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelVila"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoVila"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hotelPiramide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/hotelVila"
+            android:layout_below="@+id/hotelPaso">
+
+            <ImageView
+                android:id="@+id/hotelPiramideFoto"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hotel_piramide_salou" />
+            <ImageView
+                android:id="@+id/estrellasHotelPiramide"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hestrellas4"
+                android:layout_below="@+id/hotelPiramideFoto"/>
+
+            <TextView
+                android:id="@+id/preuHotelPiramide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/estrellasHotelPiramide"
+                android:layout_below="@+id/hotelPiramideFoto"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="6dp"
+                android:text="67€"
+                />
+
+            <TextView
+                android:id="@+id/nombreHotelPiramide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estrellasHotelPiramide"
+                android:text="Hotel Piramide Salou"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoPiramide"
+                android:src="@drawable/info_ico"
+                android:layout_below="@+id/nombreHotelPiramide"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="infoPiramide"
+                />
+        </RelativeLayout>
     </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelRiver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="26dp"
-        android:layout_toEndOf="@+id/hotelCreek"
-        android:layout_below="@+id/var">
-
-        <ImageView
-            android:id="@+id/hotelRiverFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_gold_river" />
-        <ImageView
-            android:id="@+id/estrellasHotelRiver"
-            android:layout_width="87dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas5"
-            android:layout_below="@+id/hotelRiverFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelRiver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelRiver"
-            android:layout_below="@+id/hotelRiverFoto"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="6dp"
-            android:text="130€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelRiver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelRiver"
-            android:text="Hotel Gold River"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelMansionLucy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="26dp"
-        android:layout_marginStart="10dp"
-        android:layout_below="@+id/hotelCreek">
-
-        <ImageView
-            android:id="@+id/hotelMansionLucyFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_mansion_lucy" />
-        <ImageView
-            android:id="@+id/estrellasHotelMansionLucy"
-            android:layout_width="87dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas5"
-            android:layout_below="@+id/hotelMansionLucyFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelMansionLucy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelMansionLucy"
-            android:layout_below="@+id/hotelMansionLucyFoto"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="6dp"
-            android:text="295€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelMansionLucy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelMansionLucy"
-            android:text="Hotel Mansion de Lucy"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelPortAventura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="26dp"
-        android:layout_toEndOf="@+id/hotelMansionLucy"
-        android:layout_below="@+id/hotelRiver">
-
-        <ImageView
-            android:id="@+id/hotelPortAventuraFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_port_aventura" />
-        <ImageView
-            android:id="@+id/estrellasHotelPortAventura"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas4"
-            android:layout_below="@+id/hotelPortAventuraFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelPortAventura"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelPortAventura"
-            android:layout_below="@+id/hotelPortAventuraFoto"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="6dp"
-            android:text="130€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelPortAventura"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelPortAventura"
-            android:text="Hotel PortAventura"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelCaribe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="26dp"
-        android:layout_marginStart="10dp"
-        android:layout_below="@+id/hotelMansionLucy">
-
-        <ImageView
-            android:id="@+id/hotelCaribeFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_caribe" />
-
-        <ImageView
-            android:id="@+id/estrellasHotelCaribe"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas4"
-            android:layout_below="@+id/hotelCaribeFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelCaribe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelCaribe"
-            android:layout_below="@+id/hotelCaribeFoto"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="6dp"
-            android:text="130€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelCaribe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelCaribe"
-            android:text="Hotel Caribe"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelPaso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="26dp"
-        android:layout_toEndOf="@+id/hotelCaribe"
-        android:layout_below="@+id/hotelPortAventura">
-
-        <ImageView
-            android:id="@+id/hotelPasoFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_el_paso" />
-        <ImageView
-            android:id="@+id/estrellasHotelPaso"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas4"
-            android:layout_below="@+id/hotelPasoFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelPaso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelPaso"
-            android:layout_below="@+id/hotelPasoFoto"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="6dp"
-            android:text="130€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelPaso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelPaso"
-            android:text="Hotel el Paso"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelVila"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="26dp"
-        android:layout_marginStart="10dp"
-        android:layout_below="@+id/hotelCaribe">
-
-        <ImageView
-            android:id="@+id/hotelVilaFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_vila_centric" />
-        <ImageView
-            android:id="@+id/estrellasHotelVila"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas4"
-            android:layout_below="@+id/hotelVilaFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelVila"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelVila"
-            android:layout_below="@+id/hotelVilaFoto"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="6dp"
-            android:text="95€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelVila"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelVila"
-            android:text="Hotel Vila Centric"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/hotelPiramide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="26dp"
-        android:layout_toEndOf="@+id/hotelVila"
-        android:layout_below="@+id/hotelPaso">
-
-        <ImageView
-            android:id="@+id/hotelPiramideFoto"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:src="@drawable/hotel_piramide_salou" />
-        <ImageView
-            android:id="@+id/estrellasHotelPiramide"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hestrellas4"
-            android:layout_below="@+id/hotelPiramideFoto"/>
-
-        <TextView
-            android:id="@+id/preuHotelPiramide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/estrellasHotelPiramide"
-            android:layout_below="@+id/hotelPiramideFoto"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="6dp"
-            android:text="67€"
-            />
-
-        <TextView
-            android:id="@+id/nombreHotelPiramide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/estrellasHotelPiramide"
-            android:text="Hotel Piramide Salou"
-            />
-    </RelativeLayout>
-</RelativeLayout>
+</ScrollView>

@@ -7,6 +7,24 @@
     <string name="transport_title">Transport</string>
     <string name="restaurants_title">Restaurants</string>
     <string name="atraccions_title">Atraccions</string>
+
+    <string name="hCreek_desc">Amb accés directe al parc per l àrea de Far West, al nostre hotel ambientat al llunyà Oest podràs reviure la febre de l or.</string>
+    <string name="hRiver_desc">Amb accés directe al parc per l àrea de Far West, en aquest hotel podràs sentir-te com un autèntic texà al més pur estil llunyà Oest</string>
+    <string name="hLucy_desc">Amb accés directe al parc per l àrea de Far West, aquest hotel us submergirà al luxe de l època victoriana del llunyà Oest.</string>
+    <string name="hPort_desc">Amb accés directe al parc per l àrea de Mediterrània, aquest hotel us traslladarà a un encantador llogaret de pescadors.</string>
+    <string name="hCaribe_desc">Un oasi tropical que us traslladarà al Carib més pur, amb platges espectaculars i l ambient més càlid.</string>
+    <string name="hPaso_desc">Aquest hotel us enlluernarà pels seus espectaculars jardins, el seu exotisme i la bellesa d una hisenda tradicional mexicana d estil colonial.</string>
+    <string name="hVila_desc">Gaudeix de l experiència a Hotel Vila Centric i allotja t a prop de tot. Situat a pocs minuts de PortAventura World i de la platja.</string>
+    <string name="hPiramide">Gaudeix de les teves vacances en família o en parella en aquest modern hotel recentment renovat, amb una decoració al més pur estil mediterrani i situat a 600 metres de la platja de Salou.</string>
+
+    <string name="BusTitol">Des de bus</string>
+    <string name="TextBusCostaDaurada">Des de la Costa Daurada la companyia Plana ofereix servei diari que uneix les poblacions de la zona amb el nostre parc</string>
+    <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
+    <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
+    <string name="TrenTitol">Des de Tren</string>
+    <string name="TrenCat"> resort disposa d una parada a PortAventura World, integrada a la línia R-17 i RT2 de Rodalies de Catalunya. Si vens des de tren el billet de tren d anada i tornada es gratuita</string>
+    <string name="TrenESP"> Disposem de trens de mitja distància des de València i d alta velocitat (AVE) i llarga distància des de qualsevol punt de la Península perquè puguis arribar al resort de la manera més còmoda.</string>
+
     <string-array name="tipus_restaurants">
         <item>Tots els restaurants</item>
         <item>Mediterrània</item>
@@ -17,13 +35,20 @@
         <item>Far West</item>
     </string-array>
 
-    <string name="BusTitol">Des de bus</string>
-    <string name="TextBusCostaDaurada">Des de la Costa Daurada la companyia Plana ofereix servei diari que uneix les poblacions de la zona amb el nostre parc</string>
-    <string name="TextBusCostaBrava">Des de Moventis pots demanar bus amb la entrada conjuntament</string>
-    <string name="TextBusBcn">Julià Travel ofereix multiples excursions des de Barcelona amb una oferta de Bus + entrada amb un 10% de descompte </string>
-    <string name="TrenTitol">Des de Tren</string>
-    <string name="TrenESP">El resort disposa una parada a PortAventura World, integrada a la línia R-17 i RT2 de Rodalies de Catalunya. Amb entrada pots visitar els parcs de PortAventura World i El BITLLET DE TREN per anada i tornada ET SURT DE FRANC!</string>
-    <string name="TrenCat">Renfe també posa a la teva disposició una àmplia programació de trens de mitja distància des de València i alta velocitat (AVE) i llarga distància des de qualsevol punt de la Península</string>
+    <string-array name="estrellas_hotels">
+        <item>Tots els hotels</item>
+        <item>4 estrelles</item>
+        <item>5 estrelles</item>
+    </string-array>
+
+    <string-array name="tipus_event">
+        <item>Tots els events</item>
+        <item>Nadal</item>
+        <item>Setmana Santa</item>
+        <item>Estiu</item>
+        <item>Halloween</item>
+        <item>Carnaval</item>
+    </string-array>
 
 
 </resources>
