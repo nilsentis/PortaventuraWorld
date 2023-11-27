@@ -49,8 +49,6 @@ public class TransportActivity extends AppCompatActivity implements View.OnClick
                 if (view.getId()==R.id.BtTaxi) {
                     Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:977 38 50 50"));
                     startActivity(intent);
-
-
             }
         }
     }
