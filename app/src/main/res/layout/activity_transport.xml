@@ -43,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/var"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:layout_margin="10sp">
 
         <ImageView
             android:id="@+id/LogoBus"
@@ -96,14 +97,19 @@
             android:src="@drawable/tren"
             android:layout_below="@id/BtBus"
             />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/BtBus"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
             android:layout_toEndOf="@id/logoTren"
+            android:padding="10dp"
             android:text="@string/TrenTitol"
-            android:textSize="40sp"
-            android:padding="10dp"/>
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/AVE"
