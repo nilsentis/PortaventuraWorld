@@ -40,15 +40,6 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        Imracodelmar = findViewById(R.id.Iracodelmar);
-        String racodelmarimage = "https://media.portaventuraworld.com/mediaManager/image/1d5665c85b963a7affd4073c935af15764f9339e11dd27bc8ac682ab5edf600b.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
-        imatgeGlide(Imracodelmar ,racodelmarimage);
-
-        Imvinosfera = findViewById(R.id.Ivinosfera);
-        String vinosferaimage = "https://media.portaventuraworld.com/mediaManager/image/2bcd96f1c091e17eed669fe0fb50640d8f2dab5dfa0dfbdcf2a486c430a1f388.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
-        imatgeGlide(Imvinosfera ,vinosferaimage);
-
-
         returnBack = findViewById(R.id.Ireturn);
         returnBack.setOnClickListener(this);
 
@@ -61,6 +52,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         // Raco del mar
         Imracodelmar = findViewById(R.id.Iracodelmar);
+        String racodelmarimage = "https://media.portaventuraworld.com/mediaManager/image/1d5665c85b963a7affd4073c935af15764f9339e11dd27bc8ac682ab5edf600b.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
         imatgeGlide(Imracodelmar ,racodelmarimage);
 
         webracodemar = findViewById(R.id.webracodemar);
@@ -78,6 +70,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         //Vinosfera
         Imvinosfera = findViewById(R.id.Ivinosfera);
+        String vinosferaimage = "https://media.portaventuraworld.com/mediaManager/image/2bcd96f1c091e17eed669fe0fb50640d8f2dab5dfa0dfbdcf2a486c430a1f388.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
         imatgeGlide(Imvinosfera ,vinosferaimage);
 
         webvinosfera = findViewById(R.id.webvinosfera);
@@ -149,7 +142,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         //Canton
         Imcanton = findViewById(R.id.ICanton);
-        String cantonimage = "https://media.portaventuraworld.com/mediaManager/image/9052b57ecd009842172712c85d33efc6569bb1f4adf4d56a7d0fcc8d069dfceb.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        String cantonimage = "https://media.portaventuraworld.com/mediaManager/image/582a164557f60b717f96b16f37135d7cb71031e7ac93a99e76f4793d9b660c5c.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
         imatgeGlide(Imcanton ,cantonimage);
 
         webcanton = findViewById(R.id.webcanton);
@@ -164,12 +157,6 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         pluscanton = findViewById(R.id.pluscanton);
         pluscanton.setOnClickListener(this);
 
-
-
-
-        // Canviar Color Button
-        // Button myButton = findViewById(R.id.myButton);
-        // myButton.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
     }
 
     private void imatgeGlide(ImageView im, String url) {
@@ -338,7 +325,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         // Cocina de Epi
         if (view.getId()==R.id.webcocinaepi)
         {
-            String url = "https://www.portaventuraworld.com/ca/restaurants/punts-d-alimentacio-polynesia";
+            String url = "https://www.portaventuraworld.com/ca/restaurants/la-cocina-de-epi";
             openWebPage(url);
         }
         if (view.getId()==R.id.telefcocinaepi)
@@ -349,7 +336,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         if (view.getId()==R.id.ubicocinaepi)
         {
             String ubi = "41.0850334,1.1525974,17";
-            String nomUbi = "Bora Bora Portaventura"; //Subtenda
+            String nomUbi = "La Cocina de Epi Portaventura"; //Subtenda
 
             openMaps(ubi,nomUbi);
         }
@@ -357,16 +344,53 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         {
             Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent i li passsem en un Bundle l'informació del restaurant seleccionat
 
-            TextView titol = findViewById(R.id.titolCaptainrefuge);
+            TextView titol = findViewById(R.id.titolCocinaEpi);
             String descripcio, url;
 
             descripcio = "Pizzes, pasta, hamburgueses, pollastre i amanides pels més menuts de SésamoAventura.";
-            url = "https://www.tripadvisor.es/Attraction_Review-g659969-d6685802-Reviews-Bora_Bora-Calafell_Costa_Dorada_Province_of_Tarragona_Catalonia.html"; // subtenda
+            url = "https://www.tripadvisor.es/Restaurant_Review-g652134-d8417530-Reviews-La_Cuina_De_l_Epi-Platja_d_Aro_Castell_Platja_d_Aro_Costa_Brava_Province_of_Giron.html";
 
             Bundle sac = new Bundle();
             sac.putString("titolPlus",titol.getText().toString());
             sac.putString("descripcio",descripcio);
             sac.putString("url",url);
+
+            intent.putExtras(sac);
+            startActivity(intent);
+        }
+
+        // Canton
+        if (view.getId()==R.id.webcanton)
+        {
+            String url = "https://www.portaventuraworld.com/ca/restaurants/canton";
+            openWebPage(url);
+        }
+        if (view.getId()==R.id.telefcanton)
+        {
+            String num = "977 77 90 90";
+            callNumber(num);
+        }
+        if (view.getId()==R.id.ubicanton)
+        {
+            String ubi = "41.0850334,1.1525974,17";
+            String nomUbi = "Canton Portaventura";
+
+            openMaps(ubi,nomUbi);
+        }
+        if (view.getId()==R.id.pluscanton)
+        {
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent i li passsem en un Bundle l'informació del restaurant seleccionat
+
+            TextView titol = findViewById(R.id.titolCanton);
+            String descripcio, url;
+
+            descripcio = "Wok showcooking asiàtic: rotlles de primavera, fideus xinesos, amanides i postres.";
+            url = "https://www.tripadvisor.es/Restaurant_Review-g562814-d4241781-Reviews-Sichuan_Restaurant_Portaventura-Salou_Costa_Dorada_Province_of_Tarragona_Cataloni.html"; //Subtenda
+
+            Bundle sac = new Bundle();
+            sac.putString("titolPlus", titol.getText().toString());
+            sac.putString("descripcio", descripcio);
+            sac.putString("url", url);
 
             intent.putExtras(sac);
             startActivity(intent);
