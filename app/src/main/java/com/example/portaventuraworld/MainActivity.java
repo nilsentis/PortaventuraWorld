@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class    MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView b1,b2,b3,b4,b5,b6;
 

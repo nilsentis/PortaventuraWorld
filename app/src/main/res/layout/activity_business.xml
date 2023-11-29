@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantsActivity">
+    tools:context=".RestaurantsActivity"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/nav_heigh"
+        android:id="@+id/var"
         android:background="@color/blue" >
 
         <ImageView
@@ -38,4 +40,93 @@
     </LinearLayout>
 
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/var"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="10dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opcions:"
+            />
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:id="@+id/uncharted"
+            android:src="@drawable/uncharted"
+            android:layout_below="@+id/spinner"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uncharted"
+            android:text="Uncharted Depot"
+            android:id="@+id/TextUncharted"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uncharted"
+            android:layout_toEndOf="@+id/TextUncharted"
+            android:src="@drawable/info_ico"
+            android:id="@+id/InfoUncharted"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_toEndOf="@id/uncharted"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/spinner"
+            android:src="@drawable/botigueta"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uncharted"
+            android:layout_toEndOf="@id/uncharted"
+            android:layout_marginLeft="30dp"
+            android:text="La botigueta"
+            android:id="@+id/TextBotigueta"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uncharted"
+            android:layout_toEndOf="@+id/TextBotigueta"
+            android:src="@drawable/info_ico"
+            android:id="@+id/InfoBotigueta"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/InfoUncharted"
+            android:src="@drawable/cancarmel"
+            android:id="@+id/canCarmel"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canCarmel"
+            android:text="Can Carmel"
+            android:id="@+id/TextCarmel"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/canCarmel"
+            android:layout_toEndOf="@+id/TextCarmel"
+            android:src="@drawable/info_ico"
+            android:id="@+id/InfoCarmel"
+            android:layout_marginLeft="50dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
