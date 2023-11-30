@@ -53,7 +53,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/spinner_restaurants">
+            android:layout_below="@+id/spinner_restaurants"
+            android:id="@+id/totsRestaurants">
 
             <RelativeLayout
                 android:id="@+id/allRestaurants"
@@ -618,7 +619,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="casual"
-                            android:text="Canton"
+                            android:text="The Iron Horse"
                             android:textSize="20sp" />
 
                         <ImageView

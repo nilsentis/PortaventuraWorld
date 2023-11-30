@@ -60,7 +60,8 @@
         0. fet ,carpeta layout-land
         0. fet ,copies dels layouts xml en vertical
         0. fet ,adaptar els main landscape a la pantalla horitzontal
-        0. fent ,adaptar subpantalles a landscape
+        0. fet ,adaptar subpantalles a landscape
+        0. fet ,funcionament dels spinner al .java
         1. Restaurants (Complexe)
         2. Atraccions (Simple)
 -->

@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,9 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
     private static final int PERMISSION_REQUEST_CALL_PHONE = 1;
 
     // Inicialització layouts
+
+    RelativeLayout layoutMediterrania,layoutPolynesia,layoutSesamoAventura,layoutXina,layoutMexic,layoutFarWest;
+    ScrollView layoutTotsElRestaurants;
 
     ImageView returnBack,Imracodelmar,Imvinosfera,Imborabora,Imcaptainsrefuge,Imcocinaepi,Imcanton,Imsichuan,Imcantina,Imironhorse;
     Spinner spinner;
@@ -42,6 +47,14 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
+
+        layoutTotsElRestaurants = findViewById(R.id.totsRestaurants);
+        layoutMediterrania = findViewById(R.id.mediterrania);
+        layoutPolynesia = findViewById(R.id.polynesia);
+        layoutSesamoAventura = findViewById(R.id.sesamoAventura);
+        layoutXina = findViewById(R.id.china);
+        layoutMexic = findViewById(R.id.mexico);
+        layoutFarWest = findViewById(R.id.farwest);
 
         returnBack = findViewById(R.id.Ireturn);
         returnBack.setOnClickListener(this);
@@ -198,7 +211,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
         //Ironhorse
         Imironhorse = findViewById(R.id.IIronhorse);
-        String ironhorseimage = "https://media.portaventuraworld.com/mediaManager/image/879b22103d19e6b811abf4ddf58a0a0929cde2ac0b4136c63cbacba7d514a1db.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        String ironhorseimage = "https://media.portaventuraworld.com/mediaManager/image/1e123cb1ac5d6c7202258d36e63742e999d243e50cd04d9c5802c81ed8916a54.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
         imatgeGlide(Imironhorse ,ironhorseimage);
 
         webironhorse = findViewById(R.id.webironhorse);
@@ -526,6 +539,44 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
             intent.putExtras(sac);
             startActivity(intent);
         }
+
+
+        // Ironhorse
+        if (view.getId()==R.id.webironhorse)
+        {
+            String url = "https://www.portaventuraworld.com/ca/restaurants/the-iron-horse";
+            openWebPage(url);
+        }
+        if (view.getId()==R.id.telefironhorse)
+        {
+            String num = "977 77 90 90";
+            callNumber(num);
+        }
+        if (view.getId()==R.id.ubiironhorse)
+        {
+            String ubi = "41.0850334,1.1525974,17";
+            String nomUbi = "The Iron Horse Portaventura";
+
+            openMaps(ubi,nomUbi);
+        }
+        if (view.getId()==R.id.plusironhorse)
+        {
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent i li passsem en un Bundle l'informació del restaurant seleccionat
+
+            TextView titol = findViewById(R.id.titolIronhorse);
+            String descripcio, url;
+
+            descripcio = "Cuina americana: amanida Cèsar, hamburgueses, costelles de porc i steaks.";
+            url = "https://www.tripadvisor.es/Restaurant_Review-g562814-d4601997-Reviews-The_Iron_Horse_Hotel-Salou_Costa_Dorada_Province_of_Tarragona_Catalonia.html";
+
+            Bundle sac = new Bundle();
+            sac.putString("titolPlus", titol.getText().toString());
+            sac.putString("descripcio", descripcio);
+            sac.putString("url", url);
+
+            intent.putExtras(sac);
+            startActivity(intent);
+        }
     }
 
     private void openMaps(String ubi, String nomLloc) {
@@ -547,25 +598,45 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        /*
-        String selectedOption = parentView.getItemAtPosition(position).toString();
 
-        // Aquí pots gestionar la visibilitat dels layouts segons la selecció
-        if ("Opció A".equals(selectedOption)) {
-            layoutA.setVisibility(View.VISIBLE);
-            layoutB.setVisibility(View.GONE);
-        } else if ("Opció B".equals(selectedOption)) {
-            layoutA.setVisibility(View.GONE);
-            layoutB.setVisibility(View.VISIBLE);
-        } else {
-            // Si vols gestionar altres opcions
-            // ...
+        String selectedOption = parent.getItemAtPosition(position).toString();
+
+        if ("Tots els restaurants".equals(selectedOption)) {
+            layoutTotsElRestaurants.setVisibility(View.VISIBLE);
+        } else if ("Mediterrània".equals(selectedOption)) {
+            hideAllLayouts();
+            layoutMediterrania.setVisibility(View.VISIBLE);
+        } else if ("Polynesia".equals(selectedOption)) {
+            hideAllLayouts();
+            layoutPolynesia.setVisibility(View.VISIBLE);
+        } else if ("SésamoAventura".equals(selectedOption)) {
+            hideAllLayouts();
+            layoutSesamoAventura.setVisibility(View.VISIBLE);
+        } else if ("Xina".equals(selectedOption)) {
+            hideAllLayouts();
+            layoutXina.setVisibility(View.VISIBLE);
+        } else if ("Mèxic".equals(selectedOption)) {
+            hideAllLayouts();
+            layoutMexic.setVisibility(View.VISIBLE);
+        } else if ("Far West".equals(selectedOption)) {
+            hideAllLayouts();
+            layoutFarWest.setVisibility(View.VISIBLE);
         }
-        */
+
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    public void hideAllLayouts() {
+        layoutMediterrania.setVisibility(View.GONE);
+        layoutPolynesia.setVisibility(View.GONE);
+        layoutSesamoAventura.setVisibility(View.GONE);
+        layoutXina.setVisibility(View.GONE);
+        layoutMexic.setVisibility(View.GONE);
+        layoutFarWest.setVisibility(View.GONE);
+    }
+
 }
