@@ -205,13 +205,13 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         webironhorse.setOnClickListener(this);
 
         telefironhorse = findViewById(R.id.telefironhorse);
-        telefcantina.setOnClickListener(this);
+        telefironhorse.setOnClickListener(this);
 
-        ubicantina = findViewById(R.id.ubicantina);
-        ubicantina.setOnClickListener(this);
+        ubiironhorse = findViewById(R.id.ubiironhorse);
+        ubiironhorse.setOnClickListener(this);
 
-        pluscantina = findViewById(R.id.pluscantina);
-        pluscantina.setOnClickListener(this);
+        plusironhorse = findViewById(R.id.plusironhorse);
+        plusironhorse.setOnClickListener(this);
     }
 
     private void imatgeGlide(ImageView im, String url) {
