@@ -522,6 +522,147 @@
 
                     </LinearLayout>
                 </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mexico"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/china">
+
+                    <!-- CANTINA -->
+                    <LinearLayout
+                        android:id="@+id/Lcantina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titolCantina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="casual"
+                            android:text="Cantina"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/ICantina"
+                            android:layout_width="@dimen/restaurants_galeria"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/webcantina"
+                                android:layout_width="@dimen/rest_icon_web"
+                                android:layout_height="@dimen/rest_icon_web"
+                                android:layout_marginTop="2dp"
+                                android:background="@drawable/web_icon" />
+
+                            <ImageButton
+                                android:id="@+id/telefcantina"
+                                android:layout_width="@dimen/rest_icon_telef"
+                                android:layout_height="@dimen/rest_icon_telef"
+                                android:background="@drawable/telefon_icon" />
+
+                            <ImageButton
+                                android:id="@+id/ubicantina"
+                                android:layout_width="@dimen/rest_icon_ubi"
+                                android:layout_height="@dimen/rest_icon_ubi"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/ubi_icon" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/pluscantina"
+                            android:layout_width="@dimen/rest_icon_plus"
+                            android:layout_height="@dimen/rest_icon_plus"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/plus_icon" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/farwest"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/mexico">
+
+                    <!-- THE IRON HORSE -->
+                    <LinearLayout
+                        android:id="@+id/Lironhorse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titolIronhorse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="casual"
+                            android:text="Canton"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/IIronhorse"
+                            android:layout_width="@dimen/restaurants_galeria"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/webironhorse"
+                                android:layout_width="@dimen/rest_icon_web"
+                                android:layout_height="@dimen/rest_icon_web"
+                                android:layout_marginTop="2dp"
+                                android:background="@drawable/web_icon" />
+
+                            <ImageButton
+                                android:id="@+id/telefironhorse"
+                                android:layout_width="@dimen/rest_icon_telef"
+                                android:layout_height="@dimen/rest_icon_telef"
+                                android:background="@drawable/telefon_icon" />
+
+                            <ImageButton
+                                android:id="@+id/ubiironhorse"
+                                android:layout_width="@dimen/rest_icon_ubi"
+                                android:layout_height="@dimen/rest_icon_ubi"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/ubi_icon" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/plusironhorse"
+                            android:layout_width="@dimen/rest_icon_plus"
+                            android:layout_height="@dimen/rest_icon_plus"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/plus_icon" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

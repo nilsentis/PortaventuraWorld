@@ -26,7 +26,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
     // Inicialització layouts
 
-    ImageView returnBack,Imracodelmar,Imvinosfera,Imborabora,Imcaptainsrefuge,Imcocinaepi,Imcanton;
+    ImageView returnBack,Imracodelmar,Imvinosfera,Imborabora,Imcaptainsrefuge,Imcocinaepi,Imcanton,Imsichuan,Imcantina,Imironhorse;
     Spinner spinner;
     ImageButton webracodemar, telefracodemar, ubiracodemar, plusracodemar;
     ImageButton webvinosfera, telefvinosfera, ubivinosfera, plusvinosfera;
@@ -34,6 +34,9 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
     ImageButton webcaptainsrefuge, telefcaptainsrefuge, ubicaptainsrefuge, pluscaptainsrefuge;
     ImageButton webepi, telefepi, ubiepi, plusepi;
     ImageButton webcanton, telefcanton, ubicanton, pluscanton;
+    ImageButton websichuan, telefsichuan, ubisichuan, plussichuan;
+    ImageButton webcantina, telefcantina, ubicantina, pluscantina;
+    ImageButton webironhorse, telefironhorse, ubiironhorse, plusironhorse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,6 +160,58 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         pluscanton = findViewById(R.id.pluscanton);
         pluscanton.setOnClickListener(this);
 
+
+        //Sichuan
+        Imsichuan = findViewById(R.id.ISichuan);
+        String sichuanimage = "https://media.portaventuraworld.com/mediaManager/image/69ca7bc78fb5f2a89a85933e3f33924b8957949335dec95a7fb9c3b4ddaba2b7.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Imsichuan ,sichuanimage);
+
+        websichuan = findViewById(R.id.websichuan);
+        websichuan.setOnClickListener(this);
+
+        telefsichuan = findViewById(R.id.telefsichuan);
+        telefsichuan.setOnClickListener(this);
+
+        ubisichuan = findViewById(R.id.ubisichuan);
+        ubisichuan.setOnClickListener(this);
+
+        plussichuan = findViewById(R.id.plussichuan);
+        plussichuan.setOnClickListener(this);
+
+
+        //Cantina
+        Imcantina = findViewById(R.id.ICantina);
+        String cantinaimage = "https://media.portaventuraworld.com/mediaManager/image/879b22103d19e6b811abf4ddf58a0a0929cde2ac0b4136c63cbacba7d514a1db.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Imcantina ,cantinaimage);
+
+        webcantina = findViewById(R.id.webcantina);
+        webcantina.setOnClickListener(this);
+
+        telefcantina = findViewById(R.id.telefcantina);
+        telefcantina.setOnClickListener(this);
+
+        ubicantina = findViewById(R.id.ubicantina);
+        ubicantina.setOnClickListener(this);
+
+        pluscantina = findViewById(R.id.pluscantina);
+        pluscantina.setOnClickListener(this);
+
+        //Ironhorse
+        Imironhorse = findViewById(R.id.IIronhorse);
+        String ironhorseimage = "https://media.portaventuraworld.com/mediaManager/image/879b22103d19e6b811abf4ddf58a0a0929cde2ac0b4136c63cbacba7d514a1db.jpg?tx=ar_1.86,c_crop/w_503,h_270,c_fit";
+        imatgeGlide(Imironhorse ,ironhorseimage);
+
+        webironhorse = findViewById(R.id.webironhorse);
+        webironhorse.setOnClickListener(this);
+
+        telefironhorse = findViewById(R.id.telefironhorse);
+        telefcantina.setOnClickListener(this);
+
+        ubicantina = findViewById(R.id.ubicantina);
+        ubicantina.setOnClickListener(this);
+
+        pluscantina = findViewById(R.id.pluscantina);
+        pluscantina.setOnClickListener(this);
     }
 
     private void imatgeGlide(ImageView im, String url) {
@@ -386,6 +441,82 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
             descripcio = "Wok showcooking asiàtic: rotlles de primavera, fideus xinesos, amanides i postres.";
             url = "https://www.tripadvisor.es/Restaurant_Review-g562814-d4241781-Reviews-Sichuan_Restaurant_Portaventura-Salou_Costa_Dorada_Province_of_Tarragona_Cataloni.html"; //Subtenda
+
+            Bundle sac = new Bundle();
+            sac.putString("titolPlus", titol.getText().toString());
+            sac.putString("descripcio", descripcio);
+            sac.putString("url", url);
+
+            intent.putExtras(sac);
+            startActivity(intent);
+        }
+
+
+        // Sichuan
+        if (view.getId()==R.id.websichuan)
+        {
+            String url = "https://www.portaventuraworld.com/ca/restaurants/sichuan";
+            openWebPage(url);
+        }
+        if (view.getId()==R.id.telefsichuan)
+        {
+            String num = "977 77 90 90";
+            callNumber(num);
+        }
+        if (view.getId()==R.id.ubisichuan)
+        {
+            String ubi = "41.0850334,1.1525974,17";
+            String nomUbi = "Sichuan Portaventura";
+
+            openMaps(ubi,nomUbi);
+        }
+        if (view.getId()==R.id.plussichuan)
+        {
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent i li passsem en un Bundle l'informació del restaurant seleccionat
+
+            TextView titol = findViewById(R.id.titolSichuan);
+            String descripcio, url;
+
+            descripcio = "Cuina asiàtica, amanides i postres.";
+            url = "https://www.tripadvisor.es/Restaurant_Review-g562814-d4241781-Reviews-Sichuan_Restaurant_Portaventura-Salou_Costa_Dorada_Province_of_Tarragona_Cataloni.html";
+
+            Bundle sac = new Bundle();
+            sac.putString("titolPlus", titol.getText().toString());
+            sac.putString("descripcio", descripcio);
+            sac.putString("url", url);
+
+            intent.putExtras(sac);
+            startActivity(intent);
+        }
+
+
+        // Cantina
+        if (view.getId()==R.id.webcantina)
+        {
+            String url = "https://www.portaventuraworld.com/ca/restaurants/la-cantina";
+            openWebPage(url);
+        }
+        if (view.getId()==R.id.telefcantina)
+        {
+            String num = "977 77 90 90";
+            callNumber(num);
+        }
+        if (view.getId()==R.id.ubicantina)
+        {
+            String ubi = "41.0850334,1.1525974,17";
+            String nomUbi = "Cantina Portaventura";
+
+            openMaps(ubi,nomUbi);
+        }
+        if (view.getId()==R.id.pluscantina)
+        {
+            Intent intent = new Intent(this, RestaurantsPlus.class); // obrim l'activitat desde un intent i li passsem en un Bundle l'informació del restaurant seleccionat
+
+            TextView titol = findViewById(R.id.titolCantina);
+            String descripcio, url;
+
+            descripcio = "Cuina mexicana: amanides, postres, burritos i xili amb carn.";
+            url = "https://www.tripadvisor.es/Restaurant_Review-g1007885-d8758015-Reviews-La_Cantina-Vila_Seca_Costa_Dorada_Province_of_Tarragona_Catalonia.html";
 
             Bundle sac = new Bundle();
             sac.putString("titolPlus", titol.getText().toString());

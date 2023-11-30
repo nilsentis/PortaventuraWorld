@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PortaventuraWorld"
         tools:targetApi="31">
         <activity
+            android:name=".EventsPlus"
+            android:exported="false" />
+        <activity
             android:name=".HotelsPlus"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
@@ -24,32 +27,25 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".AtraccionsActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".RestaurantsActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".EventsActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".HotelsActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".TransportActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".BusinessActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
