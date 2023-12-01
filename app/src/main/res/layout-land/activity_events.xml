@@ -50,232 +50,269 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/c_aires_carnaval">
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/totsEvents"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/eCarnaval"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Aires de Carnaval"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
 
-            <Button
-                android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/c_aires_carnaval">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/nombreCarnavalE"
+                    android:text="Aires de Carnaval"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center">
+                </TextView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iCarnaval"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    android:text="Descubrir">
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
-        </LinearLayout>
+                android:orientation="vertical"
+                android:id="@+id/eHalloween">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/hw_apocalipsis_maya">
-            </ImageView>
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/hw_apocalipsis_maya">
+                    </ImageView>
 
-            <TextView
-                android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Apocalipsis Maya"
+                        android:id="@+id/nombreMayaE"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iMaya"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/orange"
+                        android:text="Descubrir">
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/hw_halloween_factory">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Halloween Factory"
+                        android:id="@+id/nombreHwE"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iHwFactory"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/orange"
+                        android:text="Descubrir">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Apocalipsis Maya"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
+                android:orientation="vertical"
+                android:id="@+id/eNadal">
 
-            <Button
-                android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/nv_bubble_magic_christmas">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bubble Magic Christmas"
+                        android:id="@+id/nombreBubbleE"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iBubble"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/orange"
+                        android:text="Descubrir">
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/nv_christmas_parade">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Christmas Parade"
+                        android:id="@+id/nombreXmasParadeE"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center">
+                    </TextView>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iXmasParade"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/orange"
+                        android:text="Descubrir">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/eSetmanaSanta"
                 android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
-        </LinearLayout>
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ss_destination_dance">
+                </ImageView>
 
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/hw_halloween_factory">
-            </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Destination Dance"
+                    android:id="@+id/nombreDestDance"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center">
+                </TextView>
 
-            <TextView
-                android:layout_width="match_parent"
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iDestDance"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    android:text="Descubrir">
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Halloween Factory"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
+                android:layout_marginBottom="30dp"
+                android:id="@+id/eEstiu"
+                android:orientation="vertical">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/v_fiestaventura">
+                </ImageView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/nombreFiestAvE"
+                    android:text="FiestAventura"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center">
+                </TextView>
 
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/nv_bubble_magic_christmas">
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Bubble Magic Christmas"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/nv_christmas_parade">
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Christmas Parade"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/ss_destination_dance">
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Destination Dance"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:src="@drawable/v_fiestaventura">
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="FiestAventura"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:layout_gravity="center">
-            </TextView>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/orange"
-                android:text="Descubrir">
-            </Button>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iFiestAv"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    android:text="Descubrir">
+                </Button>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
