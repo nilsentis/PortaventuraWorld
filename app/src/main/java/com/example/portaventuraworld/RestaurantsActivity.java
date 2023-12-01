@@ -602,7 +602,7 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
         String selectedOption = parent.getItemAtPosition(position).toString();
 
         if ("Tots els restaurants".equals(selectedOption)) {
-            layoutTotsElRestaurants.setVisibility(View.VISIBLE);
+            showAllLayouts();
         } else if ("Mediterrània".equals(selectedOption)) {
             hideAllLayouts();
             layoutMediterrania.setVisibility(View.VISIBLE);
@@ -627,7 +627,16 @@ public class RestaurantsActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+        // es mostrara el fitxer tal qual, all layouts
+    }
 
+    private void showAllLayouts() {
+        layoutMediterrania.setVisibility(View.VISIBLE);
+        layoutPolynesia.setVisibility(View.VISIBLE);
+        layoutSesamoAventura.setVisibility(View.VISIBLE);
+        layoutXina.setVisibility(View.VISIBLE);
+        layoutMexic.setVisibility(View.VISIBLE);
+        layoutFarWest.setVisibility(View.VISIBLE);
     }
 
     public void hideAllLayouts() {

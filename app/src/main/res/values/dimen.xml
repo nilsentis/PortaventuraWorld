@@ -12,5 +12,6 @@
     <dimen name="rest_icon_telef">52dp</dimen>
     <dimen name="rest_icon_ubi">46dp</dimen>
     <dimen name="rest_icon_plus">44dp</dimen>
+    <dimen name="atraccions_galeria">280dp</dimen>
 
 </resources>

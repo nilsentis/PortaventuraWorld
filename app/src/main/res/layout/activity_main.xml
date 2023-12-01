@@ -63,7 +63,7 @@
         0. fet ,adaptar subpantalles a landscape
         0. fet ,funcionament dels spinner al .java
         1. Restaurants (Complexe)
-        2. Atraccions (Simple)
+        2. Atraccions (Simple) (Movies)
 -->
     <ImageView
         android:id="@+id/Irestaurants"
