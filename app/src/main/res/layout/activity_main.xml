@@ -62,6 +62,7 @@
         0. fet ,adaptar els main landscape a la pantalla horitzontal
         0. fet ,adaptar subpantalles a landscape
         0. fet ,funcionament dels spinner al .java
+        0. fet ,creació del botons d'informació general, amb listeners i intents (ubi, web, telef)
         1. Restaurants (Complexe)
         2. Atraccions (Simple) (Movies)
 -->
