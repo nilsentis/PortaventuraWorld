@@ -12,10 +12,10 @@ import android.widget.LinearLayout;
 import com.bumptech.glide.Glide;
 
 public class AtraccionsActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageView returnBack, Imshambala;
-    LinearLayout Lshambala;
-    ImageButton Bshambalainfo;
-    Boolean shambala = false;
+    ImageView returnBack, Imshambala, Imfurius;
+    LinearLayout Lshambala, Lfurius;
+    ImageButton Bshambalainfo, Bfuriusinfo;
+    Boolean shambala = false, furius = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,18 @@ public class AtraccionsActivity extends AppCompatActivity implements View.OnClic
 
         Lshambala = findViewById(R.id.Lshambalainfo);
         Lshambala.setVisibility(View.GONE);
+
+
+        //Furius Baco
+        Imfurius = findViewById(R.id.Ifurius);
+        String furiusimage = "https://media.portaventuraworld.com/mediaManager/image/25a4e9eaf9356a9fbf62eff283ac2a7e3f40485cc6ff3402c4cbfb92de40b79f.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit";
+        imatgeGlide(Imfurius,furiusimage);
+
+        Bfuriusinfo = findViewById(R.id.Ifuriusinfo);
+        Bfuriusinfo.setOnClickListener(this);
+
+        Lfurius = findViewById(R.id.Lfuriusinfo);
+        Lfurius.setVisibility(View.GONE);
     }
 
     private void imatgeGlide(ImageView im, String url) {
@@ -63,7 +75,19 @@ public class AtraccionsActivity extends AppCompatActivity implements View.OnClic
                 Lshambala.setVisibility(View.VISIBLE);
                 shambala = true;
             }
-
+        }
+        if (view.getId()==R.id.Ifuriusinfo)
+        {
+            if (furius)
+            {
+                Lfurius.setVisibility(View.GONE);
+                furius = false;
+            }
+            else
+            {
+                Lfurius.setVisibility(View.VISIBLE);
+                furius = true;
+            }
         }
 
     }
