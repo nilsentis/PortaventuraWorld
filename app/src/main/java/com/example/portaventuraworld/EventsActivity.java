@@ -64,7 +64,7 @@ public class EventsActivity extends AppCompatActivity implements View.OnClickLis
         spinner.setOnItemSelectedListener(this);
     }
     public void onClick(View view) {
-        if (view.getId()==R.id.IreturnH) {
+        if (view.getId()==R.id.IreturnEv) {
             Intent intent = new Intent (this, MainActivity.class);
             startActivity(intent);
         }
