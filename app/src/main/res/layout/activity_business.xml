@@ -127,6 +127,33 @@
             android:id="@+id/InfoCarmel"
             android:layout_marginLeft="50dp"/>
 
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_toEndOf="@id/uncharted"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/InfoUncharted"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/caribe"
+            android:src="@drawable/caribeshop"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caribe"
+            android:layout_toEndOf="@id/uncharted"
+            android:layout_marginLeft="30dp"
+            android:text="Caribe"
+            android:id="@+id/TextCaribe"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/caribe"
+            android:layout_toEndOf="@+id/TextCaribe"
+            android:src="@drawable/info_ico"
+            android:id="@+id/InfoCaribe"
+            android:layout_marginLeft="80dp"/>
+
     </RelativeLayout>
 
 </RelativeLayout>
