@@ -45,6 +45,9 @@
             android:name=".BusinessActivity"
             android:exported="false" />
         <activity
+            android:name=".BuisnessPlus"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

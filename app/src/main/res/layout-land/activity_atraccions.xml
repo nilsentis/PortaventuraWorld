@@ -1,14 +1,906 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AtraccionsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Atraccions"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_heigh"
+        android:background="@color/blue"
+        android:id="@+id/nav">
 
-</LinearLayout>
+        <ImageView
+            android:layout_width="@dimen/return_heigh"
+            android:layout_height="@dimen/return_heigh"
+            android:id="@+id/Ireturn"
+            android:src="@drawable/return50"
+            android:layout_margin="@dimen/return_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ATRACCIONS"
+            android:textSize="@dimen/title_size"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/IportaventuraLogo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/portaventuralogo" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/nav"
+            android:id="@+id/atraccions">
+
+            <LinearLayout
+                android:id="@+id/shambala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Tshambala"
+                    android:fontFamily="casual"
+                    android:text="SHAMBALA"
+                    android:textSize="@dimen/title_size" />
+
+                <ImageView
+                    android:id="@+id/Ishambala"
+                    android:layout_width="@dimen/atraccions_galeria"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Tshambala"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Lshambalainfo"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:background="#ffffff"
+                        android:padding="8dp">
+
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dia"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Inici"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Fi"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Dilluns a Divendres -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dilluns - Divendres"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="18:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Dissabtes -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dissabte"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="22:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Diumenges -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Diumenge"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="19:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:layout_margin="16dp"
+                        android:padding="8dp">
+
+                        <!-- Títol -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Informació Addicional"
+                                android:layout_span="3"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Atracció forta -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Atracció Forta"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Alçada mínima -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Alçada Mínima"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="1.40 m"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Photoride -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Photoride"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Accés Express -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Accés Express"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Adaptat a persones de mobilitat reduïda -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Adaptat a Mobilitat Reduïda"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/Ishambalainfo"
+                    android:layout_width="@dimen/rest_icon_plus"
+                    android:layout_height="@dimen/rest_icon_plus"
+                    android:layout_below="@+id/Ishambala"
+                    android:layout_marginTop="3dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/plus_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/furius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@+id/shambala">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Tfurius"
+                    android:fontFamily="casual"
+                    android:text="FURIUS BACO"
+                    android:textSize="@dimen/title_size" />
+
+                <ImageView
+                    android:id="@+id/Ifurius"
+                    android:layout_width="@dimen/atraccions_galeria"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Tfurius"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Lfuriusinfo"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:background="#ffffff"
+                        android:padding="8dp">
+
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dia"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Inici"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Fi"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Dilluns a Divendres -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dilluns - Divendres"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="18:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Dissabtes -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dissabte"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="21:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Diumenges -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Diumenge"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="20:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:layout_margin="16dp"
+                        android:padding="8dp">
+
+                        <!-- Títol -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Informació Addicional"
+                                android:layout_span="3"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Atracció forta -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Atracció Forta"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Alçada mínima -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Alçada Mínima"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="1.40 m"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Photoride -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Photoride"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Accés Express -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Accés Express"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Adaptat a persones de mobilitat reduïda -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Adaptat a Mobilitat Reduïda"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/Ifuriusinfo"
+                    android:layout_width="@dimen/rest_icon_plus"
+                    android:layout_height="@dimen/rest_icon_plus"
+                    android:layout_below="@+id/Ifurius"
+                    android:layout_marginTop="3dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/plus_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/khan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@+id/furius">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Tkhan"
+                    android:fontFamily="casual"
+                    android:text="DRAGON KHAN"
+                    android:textSize="@dimen/title_size" />
+
+                <ImageView
+                    android:id="@+id/Ikhan"
+                    android:layout_width="@dimen/atraccions_galeria"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Tkhan"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Lkhaninfo"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:background="#ffffff"
+                        android:padding="8dp">
+
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dia"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Inici"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Fi"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Dilluns a Divendres -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dilluns - Divendres"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="18:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Dissabtes -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dissabte"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="21:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Diumenges -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Diumenge"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="19:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:layout_margin="16dp"
+                        android:padding="8dp">
+
+                        <!-- Títol -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Informació Addicional"
+                                android:layout_span="3"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Atracció forta -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Atracció Forta"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Alçada mínima -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Alçada Mínima"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="1.40 m"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Photoride -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Photoride"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="No"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Accés Express -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Accés Express"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Adaptat a persones de mobilitat reduïda -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Adaptat a Mobilitat Reduïda"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/Ikhaninfo"
+                    android:layout_width="@dimen/rest_icon_plus"
+                    android:layout_height="@dimen/rest_icon_plus"
+                    android:layout_below="@+id/Ikhan"
+                    android:layout_marginTop="3dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/plus_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tutuki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@+id/khan">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Ttutuki"
+                    android:fontFamily="casual"
+                    android:text="TUTUKI SPLASH"
+                    android:textSize="@dimen/title_size" />
+
+                <ImageView
+                    android:id="@+id/Itutuki"
+                    android:layout_width="@dimen/atraccions_galeria"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Ttutuki"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Ltutukiinfo"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:background="#ffffff"
+                        android:padding="8dp">
+
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dia"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Inici"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="Fi"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Dilluns a Divendres -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dilluns - Divendres"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="18:00"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Dissabtes -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Dissabte"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="20:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Diumenges -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Diumenge"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="10:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                            <TextView
+                                android:text="18:30"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:layout_margin="16dp"
+                        android:padding="8dp">
+
+                        <!-- Títol -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Informació Addicional"
+                                android:layout_span="3"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- Atracció forta -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Atracció Forta"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="No"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Alçada mínima -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Alçada Mínima"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="1.20 m"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Photoride -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Photoride"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="No"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Accés Express -->
+                        <TableRow
+                            android:background="#f0f0f0"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Accés Express"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <!-- Adaptat a persones de mobilitat reduïda -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:text="Adaptat a Mobilitat Reduïda"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:text="Sí"
+                                android:layout_weight="2"
+                                android:gravity="center"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/Itutukiinfo"
+                    android:layout_width="@dimen/rest_icon_plus"
+                    android:layout_height="@dimen/rest_icon_plus"
+                    android:layout_below="@+id/Itutuki"
+                    android:layout_marginTop="3dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/plus_icon" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -70,14 +70,16 @@
             android:layout_below="@+id/uncharted"
             android:text="Uncharted Depot"
             android:id="@+id/TextUncharted"/>
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/uncharted"
-            android:layout_toEndOf="@+id/TextUncharted"
-            android:src="@drawable/info_ico"
             android:id="@+id/InfoUncharted"
-            android:layout_marginLeft="20dp"/>
+            android:layout_width="19dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/uncharted"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/TextUncharted"
+            android:src="@drawable/info_ico" />
 
         <ImageView
             android:layout_width="170dp"
